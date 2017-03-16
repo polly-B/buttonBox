@@ -53,7 +53,7 @@ void loop(){
       pressed = 1;
       startTime = millis();
       noTriggerTime = 0;
-      while (analogRead(temt6000Pin) <= 150 && noTriggerTime<timeOut){
+      while (analogRead(temt6000Pin) <= 100 && noTriggerTime<timeOut){
         noTriggerTime = millis() - startTime;
       }
       if (noTriggerTime < timeOut){
